@@ -1,0 +1,32 @@
+.social__card {
+    margin: 0 0 0 30px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 200px;
+    position: relative;
+    top: 0;
+    z-index: 999;
+    background-color: #18191A;
+    border-radius: 10px;
+    transition: transform .3s;
+}
+
+.social__card:hover{
+    transform: scale(1.1);
+}
+
+.social__title{
+    padding: 20px 30px;
+}
+
+.social__title > a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.social__title > a:hover{
+    color: grey;
+}

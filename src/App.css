@@ -1,38 +1,348 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .sidebar {
+  flex: 20%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .pages {
+  flex: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ============================== SIDEBAR START ============================== */
+
+.Sidebar {
+  height: 100%;
+  background-color: #18191A;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.Sidebar__Header {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  flex: 40%;
+}
+
+.Sidebar__Header .my__image > img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 2rem 0 0 2rem;
+  transition: transform .3s;
+}
+
+.Sidebar__Header .my__title > h4 {
+  color: #949595;
+  margin: 1rem 0 0 2rem;
+}
+
+.Sidebar__Header .my__title > p {
+  color: #949595;
+  margin: 0 1rem 0rem 2rem;
+  font-size: 0.9rem;
+}
+
+.Sidebar__Header .menu__list {
+  color: #fff;
+  visibility: hidden;
+}
+
+.Sidebar__Header .my__image > img:hover{
+  transform: scale(1.3);
+}
+
+.Sidebar__Header .my__title > h4:hover {
+  color: #fff;
+}
+
+.Sidebar__Header .my__title > p:hover {
+  color: #fff;
+}
+
+.SidebarList {
+  width: auto;
+  flex: 60%;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.SidebarList .row {
+  width: auto;
+  height: 60px;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #949595;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: #293846;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.SidebarList #active {
+  color: #fff;
+  background-color: #293846;
+  border-left: 3px solid #4F46E5;
+}
+
+.SidebarList__toggle {
+  width: auto;
+  flex: 60%;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.SidebarList__toggle .row {
+  width: auto;
+  height: 60px;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #949595;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.SidebarList__toggle .row:hover {
+  cursor: pointer;
+  background-color: #293846;
+}
+
+.SidebarList__toggle #active {
+  color: #fff;
+  background-color: #293846;
+  border-left: 3px solid #4F46E5;
+}
+
+.row #icon {
+  flex: 20%;
+  display: grid;
+  place-items: center;
+}
+
+.row #title {
+  flex: 60%;
+  font-weight: 700;
+}
+
+.row #right-arrow {
+  flex: 20%;
+}
+
+/* ============================== SIDEBAR END ============================== */
+
+/* ============================== HOME START ============================== */
+
+.home {
+  height: 100%;
+  background-color: #212324;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+#particles-js {
+  max-width: 75%;
+  max-height: 75%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+}
+
+.intro {
+  color: #fff;
+  width: 80%;
+}
+
+.about {
+  width: 80%;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #18191A;
+  transition: transform .3s;
+  opacity: 0.8;
+}
+
+.about:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.about > p > span {
+  color: #4F46E5;
+}
+
+/* ============================== HOME END ============================== */
+
+/* ============================== PROJECTS START ============================== */
+
+.projects {
+  height: 100%;
+  background-color: #212324;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ============================== PROJECTS END ============================== */
+
+/* ============================== SOCIALS START ============================== */
+
+.socials {
+  height: 100%;
+  background-color: #212324;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+/* ============================== SOCIALS END ============================== */
+
+/* ============================== RESUME START ============================== */
+
+.resume {
+  height: 100%;
+  background-color: #212324;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.resume__container{
+  width: 80%;
+  position: relative;
+  top: 0;
+  z-index: 999;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #18191A;
+  border-radius: 10px;
+  padding: 0 50px;
+  transition: transform 0.3s;
+}
+
+.resume__container:hover{
+  transform: scale(1.05);
+}
+
+.preview > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.preview > a:hover {
+  color: grey;
+}
+
+.download > a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.download > a:hover{
+  color: grey;
+}
+
+/* ============================== RESUME END ============================== */
+
+/* ============================== BLOGS START ============================== */
+
+.blogs {
+  height: 100%;
+  background-color: #212324;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ============================== BLOGS END ============================== */
+
+/* ============================== RESPONSIVE START ============================== */
+
+@media only screen and (max-width: 969px){
+  .App {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .row #right-arrow {
+    display: none;
+  }
+
+
+  .SidebarList {
+    display: none;
+  }
+
+  .Sidebar__Header {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .Sidebar__Header .my__image > img{
+    margin: 2rem 0 0 1rem;
+  }
+
+  .Sidebar__Header .my__title > h4 {
+    margin: 2rem 0 0 1rem;
+  }
+
+  .Sidebar__Header .my__title > p {
+    color: #949595;
+    margin: 0 0 1rem 1rem;
+  }
+
+  .Sidebar__Header .menu__list {
+    visibility: visible;
+    margin: 5rem 2rem 2rem 0;
+  }
+
+  .resume__container{
+    width: 60%;
+    flex-direction: column !important;
   }
 }
+
+/* ============================== RESPONSIVE END ============================== */
