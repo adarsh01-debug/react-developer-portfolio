@@ -306,6 +306,7 @@ body{
 @media only screen and (max-width: 969px){
   .App {
     flex-direction: column;
+    overflow: scroll !important;
   }
 
   .row #right-arrow {
