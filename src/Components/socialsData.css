@@ -30,3 +30,9 @@
 .social__title > a:hover{
     color: grey;
 }
+
+@media only screen and (max-width: 969px){
+    .social__card{
+        margin-top: 2rem;
+    }
+}

@@ -176,6 +176,9 @@ body{
 .intro {
   color: #fff;
   width: 80%;
+  position: relative;
+  top: 0;
+  z-index: 999;
 }
 
 .about {
@@ -225,9 +228,17 @@ body{
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
+}
+
+.social__form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ============================== SOCIALS END ============================== */
@@ -339,6 +350,10 @@ body{
   .Sidebar__Header .menu__list {
     visibility: visible;
     margin: 5rem 2rem 2rem 0;
+  }
+
+  .socials{
+    flex-direction: column;
   }
 
   .resume__container{

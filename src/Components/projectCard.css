@@ -18,6 +18,11 @@
     align-items: center;
     border: 1px solid #fff;
     border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card__body:hover{
+    transform: scale(1.05);
 }
 
 .card__title{
@@ -52,6 +57,10 @@
     padding: 3px 0;
     color: #fff;
     text-decoration: none;
+}
+
+.card__source > a:hover{
+    color: grey;
 }
 
 @media only screen and (max-width: 520px){
