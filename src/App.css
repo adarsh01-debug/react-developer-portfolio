@@ -105,7 +105,7 @@ body{
   background-color: #293846;
 }
 
-.SidebarList #active {
+.SidebarList .active {
   color: #fff;
   background-color: #293846;
   border-left: 3px solid #4F46E5;
@@ -137,7 +137,7 @@ body{
   background-color: #293846;
 }
 
-.SidebarList__toggle #active {
+.SidebarList__toggle .active {
   color: #fff;
   background-color: #293846;
   border-left: 3px solid #4F46E5;
@@ -156,6 +156,10 @@ body{
 
 .row #right-arrow {
   flex: 20%;
+}
+
+.link__router{
+  text-decoration: none;
 }
 
 /* ============================== SIDEBAR END ============================== */
@@ -337,7 +341,7 @@ body{
   .SidebarList {
     display: none;
   }
-
+  
   .Sidebar__Header {
     display: flex;
     justify-content: space-evenly;

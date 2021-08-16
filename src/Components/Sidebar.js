@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "../App.css";
-import { SidebarData } from "./SidebarData";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListIcon from "@material-ui/icons/List";
+import { NavLink } from 'react-router-dom';
+import HomeIcon from '@material-ui/icons/Home';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import MailIcon from '@material-ui/icons/Mail';
+import DescriptionIcon from '@material-ui/icons/Description';
+import BookIcon from '@material-ui/icons/Book';
 
 function Sidebar() {
   const [sidebar, setSidebar] = useState(true);
@@ -28,24 +33,41 @@ function Sidebar() {
         </div>
       </div>
       <ul className={ sidebar ? "SidebarList" : "SidebarList__toggle"}>
-        {SidebarData.map((value, key) => {
-          return (
-            <li
-              key={key}
-              className="row"
-              id={window.location.pathname === value.link ? "active" : ""}
-              onClick={() => {
-                window.location.pathname = value.link;
-              }}
-            >
-              <div id="icon">{value.icon}</div>
-              <div id="title">{value.title}</div>
+        <NavLink to="/" className="row link__router" exact activeClassName="active">
+            <div id="icon"><HomeIcon/></div>
+            <div id="title">home</div>
+            <div id="right-arrow">
+              <ChevronRightIcon />
+            </div>
+        </NavLink>
+        <NavLink to="/projects" className="row link__router" exact activeClassName="active">
+              <div id="icon"><DashboardIcon/></div>
+              <div id="title">projects</div>
               <div id="right-arrow">
                 <ChevronRightIcon />
               </div>
-            </li>
-          );
-        })}
+        </NavLink>
+        <NavLink to="/socials" className="row link__router" exact activeClassName="active">
+            <div id="icon"><MailIcon/></div>
+            <div id="title">socials</div>
+            <div id="right-arrow">
+              <ChevronRightIcon />
+            </div>
+        </NavLink>
+        <NavLink to="/resume" className="row link__router" exact activeClassName="active">
+            <div id="icon"><DescriptionIcon/></div>
+            <div id="title">résumé</div>
+            <div id="right-arrow">
+              <ChevronRightIcon />
+            </div>
+        </NavLink>
+        <NavLink to="/blogs" className="row link__router" exact activeClassName="active">
+            <div id="icon"><BookIcon/></div>
+            <div id="title">blogs</div>
+            <div id="right-arrow">
+              <ChevronRightIcon />
+            </div>
+        </NavLink>
       </ul>
     </div>
   );

@@ -39,21 +39,11 @@ function App() {
 
           <div className="pages">
             <Switch>
-              <Route exact path="/">
-                <Home/>
-              </Route>
-              <Route path="/projects">
-                <Projects/>
-              </Route>
-              <Route path="/socials">
-                <Socials/>
-              </Route>
-              <Route path="/resume">
-                <Resume/>
-              </Route>
-              <Route path="/blogs">
-                <Blogs/>
-              </Route>
+              <Route exact path="/" component={Home}/>
+              <Route exact path="/projects" component={Projects}/>
+              <Route exact path="/socials" component={Socials}/>
+              <Route exact path="/resume" component={Resume}/>
+              <Route exact path="/blogs" component={Blogs}/>
             </Switch>
           </div>
         </div>
