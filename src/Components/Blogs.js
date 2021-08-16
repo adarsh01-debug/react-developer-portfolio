@@ -13,10 +13,10 @@ function Blogs() {
                 <Typewriter options={{loop: true}} onInit={(typerwriter) =>{
                     typerwriter
                     .typeString("blogs comming soon!")
-                    .pauseFor(3000)
+                    .pauseFor(2000)
                     .deleteAll()
-                    .typeString("see you later!")
-                    .pauseFor(3000)
+                    .typeString("see you soon!")
+                    .pauseFor(2000)
                     .deleteAll()
                     .start();
                     }}/>

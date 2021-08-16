@@ -15,16 +15,16 @@ function Home() {
                     <Typewriter options={{loop: true}} onInit={(typerwriter) =>{
                         typerwriter
                         .typeString("developer")
-                        .pauseFor(3000)
+                        .pauseFor(2000)
                         .deleteAll()
                         .typeString("engineer")
-                        .pauseFor(3000)
+                        .pauseFor(2000)
                         .deleteAll()
                         .typeString("programmer")
-                        .pauseFor(3000)
+                        .pauseFor(2000)
                         .deleteAll()
                         .typeString("encoder")
-                        .pauseFor(3000)
+                        .pauseFor(2000)
                         .deleteAll()
                         .start();
                     }}/>
